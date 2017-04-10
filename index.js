@@ -27,7 +27,7 @@ influx.getDatabaseNames()
     })
 
 var crontab = require('node-crontab');
-var jobId = crontab.scheduleJob("*/10 * * * *", function () {
+var jobId = crontab.scheduleJob("*/5 * * * *", function () {
     api()
         .forEach(result => {
             console.log(`Speed ${result.speed} ${result.unit}`)
